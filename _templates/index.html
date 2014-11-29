@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% autoescape None %}
+
+{% block article %}
+
+{% for post in posts %}
+<article class="home" style="margin-top:40px">
+  <span class="post-date">
+    {{ post['date'] }}
+  </span>
+
+  <h1><a href="{{ post['url'] }}">{{ post['title'] }}</a></h1>
+
+  <div>
+    {{ post['body'] }}
+  </div>
+</article>
+{% end %}
+{% end %}

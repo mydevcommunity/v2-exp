@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% autoescape None %}
+
+{% block article %}
+<article class="home" style="margin-top:40px">
+
+  <span class="post-date">
+    {{ date }}
+  </span>
+
+  <h1>{{ title }}</h1>
+
+  <div>
+    {{ post }}
+  </div>
+
+</article>
+{% end %}
